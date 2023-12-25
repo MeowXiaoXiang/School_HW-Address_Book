@@ -1,0 +1,86 @@
+:root {
+    --dark-mode-background: #333;
+    --light-mode-text: #fff;
+    --table-background: var(--dark-mode-background);
+    --table-accent-background: #444;
+    --transition-duration: 0.5s;
+    --active-page-background: #007bff;
+    --active-page-text: #fff;
+}
+
+/* Navbar styles */
+.navbar {
+    padding: 8px;
+    font-size: 20px;
+}
+
+.navbar-text, .navbar-brand {
+    color: var(--light-mode-text);
+}
+
+.navbar-brand {
+    transition: color var(--transition-duration), background-color var(--transition-duration), box-shadow var(--transition-duration);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.navbar-brand:hover {
+    color: #ddd;
+    background-color: var(--dark-mode-background);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: var(--dark-mode-background);
+    color: var(--light-mode-text);
+}
+
+.dark-mode table th,
+.dark-mode .table tbody td,
+.dark-mode .pagination .page-link,
+.dark-mode .page-link {
+    background-color: var(--table-background);
+    color: var(--light-mode-text);
+}
+
+.dark-mode .page-link {
+    background-color: var(--dark-mode-background);
+}
+
+.dark-mode .page-item.active .page-link {
+    background-color: var(--active-page-background);
+    color: var(--active-page-text);
+}
+
+.dark-mode hr {
+    border-top-color: var(--light-mode-text);
+}
+
+.dark-mode input[type="text"] {
+    background-color: var(--dark-mode-background);
+    color: var(--light-mode-text);
+    border: 1px solid var(--light-mode-text);
+}
+
+.page-input {
+    width: 38px;
+    height: 38px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    background-color: var(--dark-mode-background);
+    color: var(--light-mode-text);
+    text-align: center;
+}
+
+.page-input::-webkit-inner-spin-button,
+.page-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Light mode styles */
+.light-mode .page-input {
+    background-color: #fff;
+    color: #000;
+}
