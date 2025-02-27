@@ -13,7 +13,7 @@ document.getElementById('toggle-dark-mode').addEventListener('click', function()
         theme = 'light-mode';
     }
 
-    // 使用 AJAX 發送請求到當前頁面
+    // 使用 AJAX 發送請求給目前的頁面
     var xhr = new XMLHttpRequest();
     xhr.open('POST', window.location.pathname, true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
